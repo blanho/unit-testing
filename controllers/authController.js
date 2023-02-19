@@ -64,7 +64,7 @@ export const loginUser = async (req, res, next) => {
         error: "Invalid Email or Password",
       });
     }
-
+    console.log(user._id);
     const token = await getJwtToken(user?.id);
 
     res.status(200).json({
