@@ -37,6 +37,10 @@ const userLogin = {
   password: "hashedPassword",
 };
 
+afterAll(() => {
+  jest.restoreAllMocks();
+});
+
 describe("Register User", () => {
   it("should register user", async () => {
     jest.spyOn(bcrypt, "hash").mockResolvedValueOnce("hashedPassword");

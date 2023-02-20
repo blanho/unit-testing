@@ -32,7 +32,7 @@ export const newJob = async (req, res) => {
 
     const job = await Job.create(req.body);
 
-    res.status(200).json({
+    res.status(201).json({
       job,
     });
   } catch (error) {
